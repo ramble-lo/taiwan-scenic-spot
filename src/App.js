@@ -1,25 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import {useState} from 'react'
+import Content from './components/Content';
+import Carousel from './components/Carousel';
+import SearchBar from './components/SearchBar';
+import Countdown from './components/Countdown';
 
-function App() {
+const App = () => {
+  const [searchKeyWord, setSearchKeyWord] = useState('')
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+      <SearchBar setSearchKeyWord={setSearchKeyWord}/>
+      <Carousel />
+      <Countdown />
+      <Content searchKeyWord={searchKeyWord}/>
+      <div className='backtop' onClick={()=>{window.scroll(0, 0)}}></div>
     </div>
-  );
+  )
 }
-
 export default App;

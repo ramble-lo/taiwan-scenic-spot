@@ -1,0 +1,7 @@
+.countdown-container {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    margin: 20px 0;
+    padding: 20px 5px;
+}

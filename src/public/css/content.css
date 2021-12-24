@@ -1,0 +1,89 @@
+.content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.content-tabs {
+    width: 200px;
+}
+
+.content-tabs-item {
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 5px;
+    background-color: white;
+    margin: 5px 0;
+}
+
+.content-scenesList {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 85%;
+    background-color: rgb(196, 196, 196);
+}
+
+.content-scenesList-item {
+    width: 330px;
+    height: 200px;
+    border: 1px solid black;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+.popUp-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .7);
+
+}
+
+.popUp-close {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.popUp-display {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    max-height: 700px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.popUp-display :nth-child(1) {
+    font-size: 28px;
+}
+
+.popUp-display :nth-child(2) {
+    font-size: 24px;
+}
+
+.popUp-display :nth-child(3) {
+    font-size: 24px;
+}
+
+.popUp-display :nth-child(4) {
+    font-size: 18px;
+    overflow-y: scroll;
+}
+
+.popUp-item {
+    padding: 10px 0;
+}
