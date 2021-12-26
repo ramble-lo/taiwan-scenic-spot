@@ -1,5 +1,5 @@
 import './App.css';
-import {useState} from 'react'
+import React,{useState} from 'react'
 import Content from './components/Content';
 import Carousel from './components/Carousel';
 import SearchBar from './components/SearchBar';

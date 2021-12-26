@@ -8,18 +8,20 @@ const Carousel = () => {
         return (<img 
                     className={i === page ? 'carousel-content-img' : 'carousel-content-img none'}
                     src={`https://fakeimg.pl/1300x300/?text=Carousel${v}`} 
-                    key={i}
+                    key={`carouselImg${i}`}
+                    alt={'carouselImg'}
                 ></img>)
     })
     const carouselDot = carouselNum.map((v,i) => {
         return (<div 
                     className='carousel-dot'
                     style={i === page ? {backgroundColor:'black'} : null}
-                    key={i}
+                    key={`carouselDot${i}`}
                     onClick={()=>{setPage(i)}}
                 ></div>)
     })
     useEffect(() => {
+        const id = setInterval(() => setPage((v) => v + 1), 1000);
         let temp = page
         if(page < 0){
             temp = 9
@@ -27,9 +29,6 @@ const Carousel = () => {
             temp = 0
         }
         setPage(temp)
-    }, [page])
-    useEffect(() => {
-        const id = setInterval(() => setPage((v) => v + 1), 1000);
         return () => {
             clearInterval(id)
         }
